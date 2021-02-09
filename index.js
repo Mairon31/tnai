@@ -28,7 +28,8 @@ module.exports = class TnaiAPI {
                 
                 if (queryParams) url.search = new URLSearchParams(queryParams);
                 let response = await this.getContent(url.toString(), token);
-                if(!response) throw new Error("[INVALID RESPONSE] The client received an invalid response, please go to our support Discord for get help.")
+                if(!response || (response && !response.url)) throw new Error("[INVALID RESPONSE] The client received an invalid response, please go to our support Discord for get help.");
+                
                 
                 return response.url;
               };
