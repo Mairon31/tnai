@@ -12,7 +12,7 @@ An Anime Wrapper API that helps how to get random images!
 
 
 ## Installation
-``npm i tnai``
+```npm i tnai```
 
 ## Documentation:
 
@@ -23,4 +23,7 @@ _**(The HENTAI and PORN category were temporarily disabled further updates on th
 * **[Join Here](https://discord.gg/2BQMYyV)**
 
 # Developers
-* Mairon31#8351
+* Mairon31#8351 (Discord ID: 361175641032491010)
+
+# Collaborators
+* [Danny Palma](https://github.com/danny-palma/)
