@@ -1,44 +1,55 @@
 /*
- * T N A I    A P I
- * Support: https://discord.gg/2BQMYyV
- */
+* T N A I    A P I
+* TNAI is an interactive API delegated by a token system for obtaining gif in a random way.
+*
+* **SUPPORT:** https://discord.gg/2BQMYyV
+*/
 
 const fetch = require('node-fetch');
 const { URL, URLSearchParams } = require('url');
 const endpoints = require('./endpoints.json');
 
-async function getContent(url, token) {
-  let options = {
-    "headers": {
-      "Authorization": token
-    }
-  };
-  let res = await fetch(url, options);
-  let body = await res.json();
-  let message = await body.message;
-  if (res.status !== 200) throw new Error(`[API ERROR] Message: ${message}.`);
-  return body;
-};
+module.exports = class TnaiAPI {
+    sfw = new Object();
 
-class TnaiAPI {
-  sfw = {};
-  // hentai= {};
-  // real = {};
-  constructor(token) {
-    let baseURL = 'https://tnai.ml/api/image?type=';
-    if (!token) throw new Error("[NO TOKEN INCLUDED] Didn't include an access token, get it on the website. (https://tnai.ml/)");
+      /**
+      * Main class with which you can access each function to obtain a gif from a certain endpoint.
+      * @param {string} token - You can get some token on (https://tnai.ml/).
+      */
+      constructor(token) {
+          const baseURL = 'https://tnai.ml/api/image?type=';
+          if (!token) throw new Error("[NO TOKEN INCLUDED] Didn't include an access token, get it on the website. (https://tnai.ml/).");
 
-    Object.keys(endpoints.sfw).forEach((endpoint) => {
+          Object.keys(endpoints.sfw).forEach((endpoint) => {
 
-      this.sfw[endpoint] = async (queryParams) => {
-        let url = new URL(`${baseURL}${endpoint}`);
-        if (queryParams)
-          url.search = new URLSearchParams(queryParams);
-        let response = await getContent(url.toString(), token);
-        return response.url;
-      };
+              this.sfw[endpoint] = async (queryParams) => {
+                let url = new URL(`${baseURL}${endpoint}`);
+                if(!url || (url && !url.search)) throw new Error("[INVALID ENDPOINT SEARCH] The endpoint doesn't have a valid search parameter.");
+                
+                if (queryParams) url.search = new URLSearchParams(queryParams);
+                let response = await this.getContent(url.toString(), token);
+                if(!response) throw new Error("[INVALID RESPONSE] The client received an invalid response, please go to our support Discord for get help.")
+                
+                return response.url;
+              };
+          });
+      }
 
-    });
-  }
+      /**
+      * @name getContent
+      * 
+      * With this function you can make requests to the API in a more personalized way.
+      * @param {string} url - API Endpoint.
+      * @param {string} token - Your secret token.
+      */
+      async getContent(url, token) {
+          let res = await fetch(`${url}`, {
+              "headers": {
+                "Authorization": `${token}`
+              }
+          }).then((res) => res.json());
+          if (res.status !== 200) throw new Error(`[API] An error has ocurred, error: ${body.message}.`);
+          if (!res.url) throw new Error(`[API] An error has ocurred, error: The response doesn't contain an URL, please check our support Discord for get information about API issues.`);
+          return body || null;
+      }
 }
-module.exports = TnaiAPI;
