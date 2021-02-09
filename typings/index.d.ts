@@ -1,6 +1,9 @@
+import { Body } from 'node-fetch';
+
 declare module "tnai" {
     export default class TnaiAPI {
         constructor(token: string);
+        getContent(url: string, token: string): Promise<Body | any>;
         sfw: sfw;
         // hentai: nsfw;
         // real: real;
