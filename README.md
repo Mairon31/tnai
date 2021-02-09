@@ -12,18 +12,19 @@ An Anime Wrapper API that helps how to get random images!
 
 
 ## Installation
-```npm i tnai```
+```npm install tnai```
 
 ## Documentation:
 
-* **[Read the documentation](https://docs.tnai.ml)**
-_**(The HENTAI and PORN category were temporarily disabled further updates on the support server.)**_
+* **[DOCUMENTATION](https://docs.tnai.ml)**
+**(**`The HENTAI and PORN category were temporarily disabled further updates on the support server.`**)**
 
 ## Support Server 
 * **[Join Here](https://discord.gg/2BQMYyV)**
 
 # Developers
-* Mairon31#8351 (Discord ID: 361175641032491010)
+* [Mairon31](https://github.com/Mairon31) (**Discord:** `Mairon31#9999`)
 
-# Collaborators
-* [Danny Palma](https://github.com/danny-palma/)
+# Contributors
+* [Danny Palma](https://github.com/danny-palma)
+* [Jean](https://github.com/JeanCarlosVR) (**Discord:** `if#3897`)
