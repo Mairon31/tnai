@@ -1,0 +1,30 @@
+{
+  "name": "tnai",
+  "version": "1.0.14",
+  "description": "An Anime Wrapper API that helps how to get random images!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+      "node-fetch": "2.6.1"
+  },
+  "typings": "./typings/index.d.ts",
+  "keywords": [
+    "tnai",
+    "anime",
+    "gifs",
+    "wrapper",
+    "endpoint",
+    "api",
+    "discord",
+    "nsfw",
+    "reddit",
+    "real",
+    "endpoints",
+    "sfw"
+  ],
+  "author": "mairon31",
+  "license": "ISC"
+}

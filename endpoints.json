@@ -1,0 +1,23 @@
+{ 
+    "sfw": {
+        "kiss": "kiss",
+        "hug": "hug",
+        "kick": "kick",
+        "slap": "slap",
+        "dance": "dance",
+        "happy": "happy",
+        "confused": "confused",
+        "angry": "angry",
+        "cry": "cry",
+        "blush": "blush",
+        "sleep": "sleep",
+        "laugh": "laugh",
+        "feed": "feed",
+        "pat": "pat",
+        "bored": "bored",
+        "disgust": "disgust",
+        "greeting": "greeting",
+        "sad": "sad",
+        "think": "think"
+    }
+}
