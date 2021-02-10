@@ -1,7 +1,7 @@
 <div align="center">
   <br />
   <p>
-    <a href="https://discord.gg/b8kU5QX"><img src="https://cdn.discordapp.com/attachments/702047402328195152/761426522057343006/20200930_213752.png" width="212" alt="Tnai Logo" /></a>
+    <a href="https://discord.gg/b8kU5QX"><img src="https://cdn.discordapp.com/attachments/702047402328195152/761426522057343006/20200930_213752.png" width="312" alt="Tnai Logo" /></a>
   </p>
   <br />
   <p>
