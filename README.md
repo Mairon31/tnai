@@ -20,6 +20,7 @@ An Anime Wrapper API that helps how to get random images!
 ## Documentation:
 
 * **[DOCUMENTATION](https://docs.tnai.ml)**
+
 **Note:** **(**`The HENTAI and PORN category were temporarily disabled further updates on the support server.`**)**
 
 ## Support Server 
