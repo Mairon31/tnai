@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node ./index.js"
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "dependencies": {
       "node-fetch": "2.6.1"
   },
@@ -15,6 +18,14 @@
     "url": "https://github.com/Mairon31/tnai.git"
   },
   "author": "Mairon31",
+  "contributors" [{
+    "name": "Jean",
+    "url": "https://github.com/JeanCarlosVR"
+    },
+    {
+    "name": "Danny Palma",
+    "url": "https://github.com/danny-palma"
+    }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Mairon31/tnai/issues"
