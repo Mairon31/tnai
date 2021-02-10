@@ -29,9 +29,9 @@ An Anime Wrapper API that helps how to get random images!
 ## Support Server 
 * **[Join Here](https://discord.gg/2BQMYyV)**
 
-# Developers
+## Developers
 * [Mairon31](https://github.com/Mairon31) (**Discord:** `Mairon31#9999`)
 
-# Contributors
+### Contributors
 * [Danny Palma](https://github.com/danny-palma) (**Discord:** `Danny Palma uwu#0888`)
 * [Jean](https://github.com/JeanCarlosVR) (**Discord:** `if#3897`)
