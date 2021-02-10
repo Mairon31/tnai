@@ -7,10 +7,9 @@ class MyClient {
   }
 
   async getGif() {
-
     const img = await this.tnai.sfw.hug();
 
-    return img;
+    console.log(img);
   }
 }
 
