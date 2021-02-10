@@ -5,8 +5,11 @@
   <br />
   <p>
     <a href="https://www.npmjs.com/package/tnai"><img src="https://img.shields.io/npm/v/tnai.svg?style=for-the-badge" alt="NPM version" /></a>
+    <br />
     <a href="https://www.npmjs.com/package/tnai"><img src="https://img.shields.io/npm/dt/tnai.svg?style=for-the-badge" alt="NPM downloads" /></a>
-  </p>
+    <br />
+    <a href="https://discord.gg/2BQMYyV"><img src="https://img.shields.io/discord/619915844268326952?color=%237289DA&label=Discord&style=for-the-badge" alt="Discord"></a>
+</p>
 </div>
 An Anime Wrapper API that helps how to get random images!
 
