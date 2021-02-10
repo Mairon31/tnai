@@ -52,6 +52,6 @@ module.exports = class TnaiAPI {
     }).then((res) => res.json());
     if (res.status !== 200) throw new Error(`[API] An error has ocurred, error: ${body.message}.`);
     if (!res.url) throw new Error(`[API] An error has ocurred, error: The response doesn't contain an URL, please check our support Discord for get information about API issues.`);
-    return body || null;
+    return res || null;
   }
 }
