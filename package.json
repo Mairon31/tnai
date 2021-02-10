@@ -10,6 +10,16 @@
       "node-fetch": "2.6.1"
   },
   "typings": "./typings/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mairon31/tnai.git"
+  },
+  "author": "Mairon31",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mairon31/tnai/issues"
+  },
+  "homepage": "https://github.com/Mairon31/tnai",
   "keywords": [
     "tnai",
     "anime",
@@ -23,7 +33,5 @@
     "real",
     "endpoints",
     "sfw"
-  ],
-  "author": "mairon31 Discord ID: 361175641032491010",
-  "license": "ISC"
+  ]
 }
