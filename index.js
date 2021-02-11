@@ -11,7 +11,7 @@ const endpoints = require('./endpoints.json');
 
 module.exports = class TnaiAPI {
   sfw = new Object();
-
+  hentai = new Object();
   /**
   * Main class with which you can access each function to obtain a gif from a certain endpoint.
   * @param {string} token - You can get some token on (https://tnai.ml/).
@@ -33,7 +33,23 @@ module.exports = class TnaiAPI {
 
         return response.url;
       };
-    });
+    }); // end of SFW endpoints
+
+    Object.keys(endpoints.hentai).forEach((endpoint) => {
+
+      this.hentai[endpoint] = async (queryParams) => {
+        let url = new URL(`${baseURL}${endpoint}`);
+        if (!url || (url && !url.search)) throw new Error("[INVALID ENDPOINT SEARCH] The endpoint doesn't have a valid search parameter.");
+
+        if (queryParams) url.search = new URLSearchParams(queryParams);
+        let response = await this.getContent(url.toString(), token);
+        if (!response || (response && !response.url)) throw new Error("[INVALID RESPONSE] The client received an invalid response, please go to our support Discord for get help.");
+
+
+        return response.url;
+      };
+    }); // end of HENTAI enpoints
+
   }
 
   /**
