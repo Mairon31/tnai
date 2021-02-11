@@ -60,7 +60,7 @@ module.exports = class TnaiAPI {
   * @param {string} token - Your secret token.
   */
   async getContent(url, token) {
-    if(!(url || token) || (url && token && !url.startsWith("https://tnai.ml/api/image?type="))) throw new Error ("[INVALID PARAMETERS] You dont includes URL or Token, or your URL doesn't match with any TNAI api endpoint.");
+    if(!(url || token) || (url && token && !url.startsWith("https://tnai.ml/api/"))) throw new Error ("[INVALID PARAMETERS] You dont includes URL or Token, or your URL doesn't match with any TNAI api endpoint.");
     let res = await fetch(`${url}`, {
       "headers": {
         "Authorization": `${token}`
