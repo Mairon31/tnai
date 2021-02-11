@@ -17,13 +17,13 @@ module.exports = class TnaiAPI {
   * @param {string} token - You can get some token on (https://tnai.ml/).
   */
   constructor(token) {
-    const baseURL = 'https://tnai.ml/api/image?type=';
+    const baseURL = 'https://tnai.ml/api';
     if (!token) throw new Error("[NO TOKEN INCLUDED] Didn't include an access token, get it on the website. (https://tnai.ml/).");
 
     Object.keys(endpoints.sfw).forEach((endpoint) => {
 
       this.sfw[endpoint] = async (queryParams) => {
-        let url = new URL(`${baseURL}${endpoint}`);
+        let url = new URL(`${baseURL}/image?type=${endpoint}`);
         if (!url || (url && !url.search)) throw new Error("[INVALID ENDPOINT SEARCH] The endpoint doesn't have a valid search parameter.");
 
         if (queryParams) url.search = new URLSearchParams(queryParams);
@@ -38,7 +38,7 @@ module.exports = class TnaiAPI {
     Object.keys(endpoints.hentai).forEach((endpoint) => {
 
       this.hentai[endpoint] = async (queryParams) => {
-        let url = new URL(`${baseURL}${endpoint}`);
+        let url = new URL(`${baseURL}/hentai?type=${endpoint}`);
         if (!url || (url && !url.search)) throw new Error("[INVALID ENDPOINT SEARCH] The endpoint doesn't have a valid search parameter.");
 
         if (queryParams) url.search = new URLSearchParams(queryParams);
@@ -70,4 +70,4 @@ module.exports = class TnaiAPI {
     if (!res.url) throw new Error(`[API] An error has ocurred, error: The response doesn't contain an URL, please check our support Discord for get information about API issues.`);
     return res || null;
   }
-}
+} 
